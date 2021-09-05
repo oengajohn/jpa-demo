@@ -24,6 +24,7 @@
     <wildfly.server.management.port>9990</wildfly.server.management.port>
     <wildfly.server.user.username>username</wildfly.server.user.username>
     <wildfly.server.user.password>Secret12#</wildfly.server.user.password>
+    <lombok.version>1.18.20</lombok.version>
   </properties>
 
   <dependencies>
@@ -47,6 +48,11 @@
       <groupId>org.hibernate</groupId>
       <artifactId>hibernate-java8</artifactId>
       <version>${hibernate-java8.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>org.projectlombok</groupId>
+      <artifactId>lombok</artifactId>
+      <version>${lombok.version}</version>
     </dependency>
   </dependencies>
 
