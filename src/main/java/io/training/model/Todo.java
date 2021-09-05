@@ -7,6 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.PrePersist;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -32,4 +33,8 @@ public class Todo {
   @JoinColumn(name = "user_id", nullable = false)
   private UserAccount userAccount;
 
+  @PrePersist
+  public void prePersist() {
+    setCompleted(false);
+  }
 }
